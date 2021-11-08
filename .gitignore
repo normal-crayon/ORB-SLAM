@@ -1,4 +1,8 @@
 /__pycache__
-/SLAM
+/myenv
 /debug
+/pangolin
+/g2opy
+linux_signing_key.pub
+
 
