@@ -1,6 +1,7 @@
 import os
 import sys
 
+from moviepy.editor import VideoFileClip as vf
 import time
 import cv2
 from display import Display2D, Display3D
@@ -204,6 +205,10 @@ if __name__ == "__main__":
     # add scale param?
     gt_pose[:, :3, 3] *= 50
 
+  
+  clip = vf(sys.argv[1])
+  duration = int(clip.duration)
+
   i = 0
   while cap.isOpened():
     ret, frame = cap.read()
@@ -224,9 +229,9 @@ if __name__ == "__main__":
       disp2d.paint(img)
 
     i += 1
-    """
-    if i == 10:
+    
+    if i == duration:
       with open('map.json', 'w') as f:
-        f.write(mapp.serialize())
+        f.write(slam.mapp.serialize())
         exit(0)
-    """
+
