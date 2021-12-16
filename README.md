@@ -9,6 +9,10 @@ g2opy dependency setup, follow -> https://github.com/uoip/g2opy
 Run command,
 <pre><code>python slam.py test/car.mp4</code></pre>
 <br>
+To display serialized map (map.json) run, <br><br>
+
+<pre><code>python3 visualize_json.py map.json</code></pre>
+<br>
 
 TODO:
 1. Dockerize
